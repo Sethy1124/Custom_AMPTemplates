@@ -3,7 +3,7 @@
         "ConfigFile": "server.cfg",
         "AutoMap": true,
         "ConfigType": "template",
-        "ConfigFileTemplate": "./server.cfg"
+        "ConfigFileTemplate": "./sar_server.cfg"
     },
     {
         "ConfigFile": "server/start.bat",
