@@ -12,7 +12,7 @@
         "ConfigFileTemplate": "./start.cfg"
     },
     {
-        "ConfigFile": "?????/run.sh",
+        "ConfigFile": "temp/run.sh",
         "AutoMap": true,
         "ConfigType": "template",
         "ConfigFileTemplate": "./run.cfg"
