@@ -165,6 +165,13 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Clone Resources Repo",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "GitRepo",
+        "UpdateSourceData": "{{ResourceRepo}}",
+        "UpdateSourceTarget": "{{$FullBaseDir}}"
+    },
+    {
         "UpdateStageName": "Server.cfg Template Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
