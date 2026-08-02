@@ -16,6 +16,14 @@
         "SkipOnFailure": true
     },
     {
+        "UpdateStageName": "Delete Binary Directory Contents",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullBaseDir}}server/alpine/\\\"* >/dev/null 2>&1\"",
+        "SkipOnFailure": true
+    },
+    {
         "UpdateStageName": "Server Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURLFromJQ",
@@ -25,6 +33,19 @@
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
+        "UpdateSourceConditionSetting": "ServerBuild",
+        "UpdateSourceConditionValue": "recommended_download",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURLFromJQ",
+        "UpdateSourceData": "https://changelogs-live.fivem.net/api/changelog/versions/linux/server",
+        "UpdateSourceArgs": "$.recommended_download",
+        "UpdateSourceTarget": "{{$FullBaseDir}}server",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
         "UpdateSourceConditionSetting": "ServerBuild",
         "UpdateSourceConditionValue": "recommended_download",
         "SkipOnFailure": false
@@ -43,6 +64,19 @@
         "UpdateSourceConditionValue": "optional_download",
         "SkipOnFailure": false
     },
+     {
+        "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURLFromJQ",
+        "UpdateSourceData": "https://changelogs-live.fivem.net/api/changelog/versions/linux/server",
+        "UpdateSourceArgs": "$.optional_download",
+        "UpdateSourceTarget": "{{$FullBaseDir}}server",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "UpdateSourceConditionSetting": "ServerBuild",
+        "UpdateSourceConditionValue": "optional_download",
+        "SkipOnFailure": false
+    },
     {
         "UpdateStageName": "Server Download",
         "UpdateSourcePlatform": "Windows",
@@ -53,6 +87,19 @@
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
+        "UpdateSourceConditionSetting": "ServerBuild",
+        "UpdateSourceConditionValue": "latest_download",
+        "SkipOnFailure": false
+    },
+     {
+        "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURLFromJQ",
+        "UpdateSourceData": "https://changelogs-live.fivem.net/api/changelog/versions/linux/server",
+        "UpdateSourceArgs": "$.latest_download",
+        "UpdateSourceTarget": "{{$FullBaseDir}}server",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
         "UpdateSourceConditionSetting": "ServerBuild",
         "UpdateSourceConditionValue": "latest_download",
         "SkipOnFailure": false
@@ -73,6 +120,19 @@
     },
     {
         "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURLFromJQ",
+        "UpdateSourceData": "https://changelogs-live.fivem.net/api/changelog/versions/linux/server",
+        "UpdateSourceArgs": "$.critical_download",
+        "UpdateSourceTarget": "{{$FullBaseDir}}server",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "UpdateSourceConditionSetting": "ServerBuild",
+        "UpdateSourceConditionValue": "critical_download",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "{{SpecificBuildVersionURL}}",
@@ -82,6 +142,26 @@
         "DeleteAfterExtract": true,
         "UpdateSourceConditionSetting": "ServerBuild",
         "UpdateSourceConditionValue": "SpecificVersion",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "{{SpecificBuildVersionURL}}",
+        "UpdateSourceTarget": "{{$FullBaseDir}}server",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": true,
+        "UpdateSourceConditionSetting": "ServerBuild",
+        "UpdateSourceConditionValue": "SpecificVersion",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server Extract",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd ./fivem/server && tar -xf fx.tar.xz >/dev/null && rm -f fx.tar.xz\"",
         "SkipOnFailure": false
     },
     {
@@ -96,12 +176,22 @@
     },
     {
         "UpdateStageName": "Start File Template Download",
-        "UpdateSourcePlatform": "All",
+        "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/Sethy1124/SAR_AMPTemplate/main/start.cfg",
         "UpdateSourceArgs": "start.cfg",
         "UpdateSourceTarget": "{{$FullInstanceDir}}",
-        "OverwriteExistingFiles": false,
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start File Template Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Sethy1124/SAR_AMPTemplate/main/run.cfg",
+        "UpdateSourceArgs": "run.cfg",
+        "UpdateSourceTarget": "{{$FullInstanceDir}}",
+        "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     }
 ]

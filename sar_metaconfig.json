@@ -10,5 +10,11 @@
         "AutoMap": true,
         "ConfigType": "template",
         "ConfigFileTemplate": "./start.cfg"
+    },
+    {
+        "ConfigFile": "?????/run.sh",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "./run.cfg"
     }
 ]
