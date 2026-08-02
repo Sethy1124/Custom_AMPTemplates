@@ -169,7 +169,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GitRepo",
         "UpdateSourceData": "{{ResourceRepo}}",
-        "UpdateSourceTarget": "{{$FullBaseDir}}server"
+        "UpdateSourceTarget": "{{$FullBaseDir}}server-data"
     },
     {
         "UpdateStageName": "Server.cfg Template Download",
