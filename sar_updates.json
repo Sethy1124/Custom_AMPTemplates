@@ -161,7 +161,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}}/server && tar -xf fx.tar.xz >/dev/null\"",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}}/server && tar -xf fx.tar.xz >/dev/null && rm -f fx.tar.xz\"",
         "SkipOnFailure": false
     },
     {
