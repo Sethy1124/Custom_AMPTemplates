@@ -1,0 +1,14 @@
+[
+    {
+        "DisplayName": "Caddyfile",
+        "Category": "Caddyfile",
+        "Description": "Primary Caddyfile Config File",
+        "Keywords": "caddyfile",
+        "FieldName": "Caddyfile",
+        "InputType": "Textarea",
+        "ParamFieldName": "Caddyfile",
+        "DefaultValue": "localhost",
+        "Placeholder": "localhost",
+        "EnumValues": {}
+    }
+]

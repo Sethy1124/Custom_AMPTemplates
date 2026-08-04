@@ -1,0 +1,8 @@
+[
+    {
+        "ConfigFile": "caddy/Caddyfile",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate":"./caddyfile"
+    }
+]

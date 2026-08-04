@@ -1,0 +1,9 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": "2019",
+        "Name": "Admin API",
+        "Description": "Caddy Admin API",
+        "Ref": "AdminAPI"
+    }
+]
