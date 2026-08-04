@@ -111,6 +111,21 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Mark Server Private",
+        "Category": "FiveM:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server will be set as \"private\", making it not possible to join by using the server browser UI (the server connect button will be disabled). The server will not be de-listed from the master list",
+        "Keywords": "private,server,list,sv_master1",
+        "FieldName": "sv_master1",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_master1",
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "sv_master1 \"\" "
+        }
+    },
+    {
         "DisplayName": "Server Detail Banner Image URL",
         "Category": "FiveM:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -134,34 +149,6 @@
         "ParamFieldName": "banner_connecting",
         "DefaultValue": "",
         "Placeholder": "https://url.to/image.png",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Mark Server Private",
-        "Category": "FiveM:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, the server will be set as \"private\", making it not possible to join by using the server browser UI (the server connect button will be disabled). The server will not be de-listed from the master list",
-        "Keywords": "private,server,list,sv_master1",
-        "FieldName": "sv_master1",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_master1",
-        "DefaultValue": "",
-        "EnumValues": {
-            "False": "",
-            "True": "sv_master1 \"\" "
-        }
-    },
-    {
-        "DisplayName": "Starting Resources",
-        "Category": "FiveM:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the resources to load on server start. One entry per line in the format: ensure <resourcename>",
-        "Keywords": "ensure,resources",
-        "FieldName": "ensure",
-        "InputType": "Textarea",
-        "ParamFieldName": "ensure",
-        "DefaultValue": "ensure mapmanager\nensure chat\nensure spawnmanager\nensure sessionmanager\nensure basic-gamemode\nensure hardcap\nensure rconlog",
-        "Placeholder": "ensure mapmanager\nensure chat\nensure spawnmanager\nensure sessionmanager\nensure basic-gamemode\nensure hardcap\nensure rconlog",
         "EnumValues": {}
     },
     {
@@ -255,18 +242,6 @@
         }
     },
     {
-        "DisplayName": "Access Control Commands",
-        "Category": "FiveM:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Specifies [access control commands](https://docs.fivem.net/docs/server-manual/server-commands/#access-control-commands) to include in \"server.cfg\". This can be used to add system admins",
-        "Keywords": "admin,access,control",
-        "FieldName": "AccessControlCommands",
-        "InputType": "Textarea",
-        "ParamFieldName": "AccessControlCommands",
-        "DefaultValue": "",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Enable HTTP Flood Protection",
         "Category": "FiveM:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -284,6 +259,56 @@
         }
     },
     {
+        "DisplayName": "Additional Metadata",
+        "Category": "FiveM:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies additional metadata to include in \"server.cfg\". One setting per line",
+        "Keywords": "additional,settings,custom",
+        "FieldName": "MoreMetadata",
+        "InputType": "Textarea",
+        "ParamFieldName": "MoreMetadata",
+        "DefaultValue": "",
+		"Placeholder": "set map_location \"San Andreas\"",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Starting Resources",
+        "Category": "FiveM:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the resources to load on server start. One entry per line in the format: ensure <resourcename>",
+        "Keywords": "ensure,resources",
+        "FieldName": "ensure",
+        "InputType": "Textarea",
+        "ParamFieldName": "ensure",
+        "DefaultValue": "ensure mapmanager\nensure chat\nensure spawnmanager\nensure sessionmanager\nensure basic-gamemode\nensure hardcap\nensure rconlog",
+        "Placeholder": "ensure mapmanager\nensure chat\nensure spawnmanager\nensure sessionmanager\nensure basic-gamemode\nensure hardcap\nensure rconlog",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Resource Config",
+        "Category": "FiveM:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies additional config files to execute in \"server.cfg\". One entry per line in the format: exec <file name>",
+        "Keywords": "additional,settings,custom",
+        "FieldName": "resourceConfig",
+        "InputType": "Textarea",
+        "ParamFieldName": "resourceConfig",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Access Control Commands",
+        "Category": "FiveM:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies [access control commands](https://docs.fivem.net/docs/server-manual/server-commands/#access-control-commands) to include in \"server.cfg\". This can be used to add system admins",
+        "Keywords": "admin,access,control",
+        "FieldName": "AccessControlCommands",
+        "InputType": "Textarea",
+        "ParamFieldName": "AccessControlCommands",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Server/RCON IP Binding",
         "Category": "FiveM:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -292,6 +317,7 @@
         "FieldName": "$ApplicationIPBinding",
         "InputType": "hidden",
         "ParamFieldName": "ApplicationIPBinding",
+        "Hidden": true,
         "EnumValues": {}
     },
     {
@@ -307,19 +333,6 @@
         "EnumValues": {}
     },
 	{
-        "DisplayName": "Additional Metadata",
-        "Category": "FiveM:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Specifies additional metadata to include in \"server.cfg\". One setting per line",
-        "Keywords": "additional,settings,custom",
-        "FieldName": "MoreMetadata",
-        "InputType": "Textarea",
-        "ParamFieldName": "MoreMetadata",
-        "DefaultValue": "",
-		"Placeholder": "set map_location \"San Andreas\"",
-        "EnumValues": {}
-    },
-	{
         "DisplayName": "Additional Configs",
         "Category": "FiveM:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -332,18 +345,6 @@
         "EnumValues": {}
     },
 	{
-        "DisplayName": "Convars",
-        "Category": "FiveM:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Specifies server convars to include in \"server.cfg\". One setting per line",
-        "Keywords": "additional,settings,custom",
-        "FieldName": "Convars",
-        "InputType": "Textarea",
-        "ParamFieldName": "Convars",
-        "DefaultValue": "",
-        "EnumValues": {}
-    },
-	{
         "DisplayName": "Pool Size Increase",
         "Category": "FiveM:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -352,18 +353,6 @@
         "FieldName": "PoolSize",
         "InputType": "Textarea",
         "ParamFieldName": "PoolSize",
-        "DefaultValue": "",
-        "EnumValues": {}
-    },
-	{
-        "DisplayName": "Resource Config",
-        "Category": "FiveM:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Specifies additional config files to execute in \"server.cfg\". One entry per line in the format: exec <file name>",
-        "Keywords": "additional,settings,custom",
-        "FieldName": "resourceConfig",
-        "InputType": "Textarea",
-        "ParamFieldName": "resourceConfig",
         "DefaultValue": "",
         "EnumValues": {}
     },
