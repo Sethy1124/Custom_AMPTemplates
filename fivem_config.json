@@ -175,7 +175,7 @@
         "FieldName": "sv_enforceGameBuild",
         "InputType": "enum",
         "ParamFieldName": "sv_enforceGameBuild",
-        "DefaultValue": "3571",
+        "DefaultValue": "3751",
         "EnumValues": {
             "1": "1 (Base game without any DLCs)",
             "1604": "1604 (Arena War)",
@@ -396,7 +396,7 @@
         "FieldName": "ResourceRepo",
         "InputType": "enum",
         "ParamFieldName": "ResourceRepo",
-        "DefaultValue": "https://github.com/citizenfx/cfx-server-data.git",
+        "DefaultValue": "{{CustomRepo}}",
         "EnumValues": {
             "https://github.com/citizenfx/cfx-server-data.git": "Cfx.re standard repo (default)",
             "{{CustomRepo}}": "Custom repo"
@@ -411,7 +411,7 @@
         "FieldName": "CustomRepo",
         "InputType": "url",
         "ParamFieldName": "CustomRepo",
-        "DefaultValue": "",
+        "DefaultValue": "https://github.com/Sethy1124/cfx-server-data.git",
         "Placeholder": "https://github.com/username/reponame.git",
         "EnumValues": {}
     }
