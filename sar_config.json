@@ -411,7 +411,7 @@
         "FieldName": "CustomRepo",
         "InputType": "url",
         "ParamFieldName": "CustomRepo",
-        "DefaultValue": "https://github.com/sethy1124/cfx-server-data.git",
+        "DefaultValue": "",
         "Placeholder": "https://github.com/username/reponame.git",
         "EnumValues": {}
     }
