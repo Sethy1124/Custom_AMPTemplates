@@ -1,0 +1,61 @@
+[
+    {
+        "DisplayName": "Server Build",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the server build to install. If \"Specific version\" is selected, the download URL for the relevant build must be set under Specific Build Version Download URL. Update the server after changing this setting",
+        "Keywords": "server,build,artifact,recommended,latest,optional,critical,specific",
+        "FieldName": "ServerBuild",
+        "InputType": "enum",
+        "ParamFieldName": "ServerBuild",
+        "DefaultValue": "recommended_download",
+        "EnumValues": {
+            "recommended_download": "Recommended (default)",
+            "optional_download": "Optional",
+            "latest_download": "Latest",
+            "critical_download": "Critical",
+            "SpecificVersion": "Specific version"
+        }
+    },
+    {
+        "DisplayName": "Specific Build Version Download URL",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the download URL for a specific server build to install, if \"Specific version\" is selected under Server Build. Select the relevant URL from the [Windows build list](https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/) or [Linux build list](https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/). The Windows URL should end in .zip rather than .7z",
+        "Keywords": "server,build,artifact,specific,version",
+        "FieldName": "SpecificBuildVersionURL",
+        "InputType": "url",
+        "ParamFieldName": "SpecificBuildVersionURL",
+        "DefaultValue": "",
+        "Placeholder": "https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/6593-7672c8c849165dad70a1e82f89e31059d8fcf20d/server.zip",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Resource GitHub Repo",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the GitHub repo from which to clone resources. If \"Custom repo\" is selected, the relevant repo URL must be set under Custom Repo URL. Delete the server-data directory and update the server after changing this setting",
+        "Keywords": "resource,repo,repository,github",
+        "FieldName": "ResourceRepo",
+        "InputType": "enum",
+        "ParamFieldName": "ResourceRepo",
+        "DefaultValue": "{{CustomRepo}}",
+        "EnumValues": {
+            "https://github.com/citizenfx/cfx-server-data.git": "Cfx.re standard repo (default)",
+            "{{CustomRepo}}": "Custom repo"
+        }
+    },
+    {
+        "DisplayName": "Custom Repo URL",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the URL for a custom repo from which to clone resources, if \"Custom repo\" is selected under Resource GitHub Repo. The URL must end in .git. The repo must be public and on the main/master branch",
+        "Keywords": "resource,custom,repo,repository,github,url",
+        "FieldName": "CustomRepo",
+        "InputType": "url",
+        "ParamFieldName": "CustomRepo",
+        "DefaultValue": "https://github.com/Sethy1124/cfx-server-data.git",
+        "Placeholder": "https://github.com/username/reponame.git",
+        "EnumValues": {}
+    }
+]
