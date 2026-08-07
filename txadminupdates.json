@@ -187,12 +187,5 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"cd ./cfx/server && tar -xf fx.tar.xz >/dev/null && rm -f fx.tar.xz\"",
         "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Clone Resources Repo",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "GitRepo",
-        "UpdateSourceData": "{{ResourceRepo}}",
-        "UpdateSourceTarget": "{{$FullBaseDir}}resources"
     }
 ]
