@@ -8,14 +8,6 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Create Data Directory",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}server-data",
-        "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "Delete Binary Directory Contents",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
