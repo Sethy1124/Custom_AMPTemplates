@@ -16,22 +16,6 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Delete Server Executable",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullBaseDir}}caddy/\\\"* >/dev/null 2>&1\"",
-        "SkipOnFailure": true
-    },
-    {
-        "UpdateStageName": "Delete Server Executable",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C del /Q /F \"{{$FullBaseDir}}caddy\\\"* > NUL 2>&1",
-        "SkipOnFailure": true
-    },
-    {
         "UpdateStageName": "Download Caddy",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "GithubRelease",
