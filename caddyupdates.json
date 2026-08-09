@@ -49,14 +49,6 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Set Capabilities",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"sudo /usr/sbin/setcap cap_net_admin,cap_net_bind_service+ep /home/amp/.ampdata/instances/WebServer01/CaddyServer/caddy/caddy\"",
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "Download Caddyfile Template",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
