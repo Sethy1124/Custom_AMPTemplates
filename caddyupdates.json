@@ -54,7 +54,7 @@
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/Sethy1124/Custom_AMPTemplates/refs/heads/main/caddyfile",
         "UpdateSourceArgs": "Caddyfile",
-        "UpdateSourceTarget": "{{$FullInstanceDir}}caddy",
+        "UpdateSourceTarget": "{{$FullBaseDir}}caddy",
         "OverwriteExistingFiles": false,
         "SkipOnFailure": false
     }
