@@ -1,0 +1,3 @@
+In order for Caddy to work, you must open the Web Ports.
+- Port 80 for TCP and UDP
+- Port 443 for TCP
