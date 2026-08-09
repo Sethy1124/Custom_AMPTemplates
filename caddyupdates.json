@@ -53,7 +53,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd ./CaddyServer/caddy && setcap 'CAP_NET_ADMIN=eip CAP_NET_BIND_SERVICE=eip' caddy\"",
+        "UpdateSourceArgs": "-c \"sudo cd ./CaddyServer/caddy && setcap 'CAP_NET_ADMIN=eip CAP_NET_BIND_SERVICE=eip' caddy\"",
         "SkipOnFailure": false
     },
     {
