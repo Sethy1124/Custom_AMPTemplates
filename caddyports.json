@@ -1,6 +1,20 @@
 [
     {
         "Protocol": "Both",
+        "Port": "8080",
+        "Name": "HTTP",
+        "Description": "HTTP Traffic",
+        "Ref": "HttpPort"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": "8443",
+        "Name": "HTTPS",
+        "Description": "HTTPS Traffic",
+        "Ref": "HttpsPort"
+    },
+    {
+        "Protocol": "Both",
         "Port": "2019",
         "Name": "Admin API",
         "Description": "Caddy Admin API",

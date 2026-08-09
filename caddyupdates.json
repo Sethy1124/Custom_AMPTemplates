@@ -16,6 +16,14 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Create EnabledSites Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}EnabledSites",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Download Caddy",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "GithubRelease",

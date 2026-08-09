@@ -2,7 +2,7 @@
     {
         "DisplayName": "Caddyfile",
         "Category": "Caddyfile",
-        "Description": "Primary Caddyfile Config File",
+        "Description": "Caddyfile Configuration",
         "Keywords": "caddyfile",
         "FieldName": "Caddyfile",
         "InputType": "Textarea",

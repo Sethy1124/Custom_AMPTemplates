@@ -1,3 +1,10 @@
 # This file is controlled by AMP. Any manual changes will be overwritten
 
+{
+	http_port {{HttpPort}}
+	https_port {{HttpsPort}}
+}
+
+import ../EnabledSites/*
+
 {{Caddyfile}}
