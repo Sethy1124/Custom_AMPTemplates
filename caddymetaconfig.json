@@ -3,6 +3,6 @@
         "ConfigFile": "caddy/Caddyfile",
         "AutoMap": true,
         "ConfigType": "template",
-        "ConfigFileTemplate":"./CaddyFile"
+        "ConfigFileTemplate":"./Caddyfile"
     }
 ]
