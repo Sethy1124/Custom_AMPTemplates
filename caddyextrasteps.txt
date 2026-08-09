@@ -1,3 +1,43 @@
-In order for Caddy to work, you must open the Web Ports.
-- Port 80 for TCP and UDP
-- Port 443 for TCP
+# Linux ##
+# Due to limitations on Linux binding to low ports without root access,
+# these steps are required for AMP to properly run Caddy
+
+# Add these Global Options to the top of the Caddyfile
+{
+	http_port 8085
+	https_port 8443
+}
+
+# Run these commands with root access  
+# Forward Traffic from the normal Web Ports to the AMP Ports
+# IMPORTANT - Make sure that the Ports match what AMP is actually using
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8085
+sudo iptables -t nat -A PREROUTING -p udp --dport 80 -j REDIRECT --to-ports 8085
+sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8443
+
+# Allow the AMP Ports through the Firewall
+sudo ufw allow 8085
+sudo ufw allow 8443/tcp
+sudo ufw reload
+
+# If you want to undo these changes:
+sudo iptables -t nat -D PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8085
+sudo iptables -t nat -D PREROUTING -p udp --dport 80 -j REDIRECT --to-ports 8085
+sudo iptables -t nat -D PREROUTING -p tcp --dport 443 -j REDIRECT --to-ports 8443
+sudo ufw delete allow 8085
+sudo ufw delete allow 8443/tcp
+sudo ufw reload
+
+
+
+## Windows ##
+# Windows does not have the same limitations on binding to low ports.
+# All that needs to be done is allowing the normal Web Ports through the Firewall
+
+# Run these commands in Powershell with Administrative Privileges 
+New-NetFirewallRule -DisplayName "Caddy HTTP" -Direction Inbound -LocalPort 80 -Protocol TCP, UDP -Action Allow
+New-NetFirewallRule -DisplayName "Caddy HTTPS" -Direction Inbound -LocalPort 443 -Protocol UDP -Action Allow
+
+# If you want to undo these changes:
+Remove-NetFirewallRule -DisplayName "Caddy HTTP"
+Remove-NetFirewallRule -DisplayName "Caddy HTTPS"
