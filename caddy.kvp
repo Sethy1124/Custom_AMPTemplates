@@ -1,6 +1,6 @@
 Meta.DisplayName=Caddy
 Meta.Description=Caddy Web Server
-Meta.OS=Windows
+Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
 Meta.Author=Sethy1124
@@ -31,7 +31,7 @@ App.RootDir=./CaddyServer/
 App.BaseDirectory=./CaddyServer/
 App.SteamWorkshopDownloadLocation=
 App.ExecutableWin=caddy/caddy.exe
-App.ExecutableLinux=
+App.ExecutableLinux=caddy/caddy
 App.WorkingDir=caddy
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=
