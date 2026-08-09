@@ -7,7 +7,7 @@
         "FieldName": "Caddyfile",
         "InputType": "Textarea",
         "ParamFieldName": "Caddyfile",
-        "DefaultValue": "localhost",
+        "DefaultValue": "",
         "Placeholder": "localhost",
         "EnumValues": {}
     }
