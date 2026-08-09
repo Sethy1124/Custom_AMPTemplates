@@ -52,9 +52,9 @@
         "UpdateStageName": "Download Caddyfile Template",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/Sethy1124/SAR_AMPTemplate/main/caddyfile",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Sethy1124/Custom_AMPTemplates/refs/heads/main/caddyfile",
         "UpdateSourceArgs": "Caddyfile",
-        "UpdateSourceTarget": "{{$FullInstanceDir}}",
+        "UpdateSourceTarget": "{{$FullInstanceDir}}caddy",
         "OverwriteExistingFiles": false,
         "SkipOnFailure": false
     }
